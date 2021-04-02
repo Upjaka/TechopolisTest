@@ -5,8 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LoginPageTest extends BaseTest {
 
-    private final String username = "89818278029";
-    private final String password = "FbDWawnWH";
     private final By MUSIC_BUTTON = By.xpath(".//div[@id='music_toolbar_button']");
     private LoginPage loginPage;
 
