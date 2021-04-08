@@ -17,7 +17,7 @@ public class UserPage {
     }
 
     public MusicPage toMusicPage() {
-        driver.findElement(MUSIC_BUTTON).click();
+        driver.get("http://ok.ru/music");
         return new MusicPage(driver);
     }
 }

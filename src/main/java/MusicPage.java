@@ -1,10 +1,11 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public class MusicPage {
 
     WebDriver driver;
-    private final By SEARCH_LOCATOR = By.xpath("");
+    private final By SEARCH_LOCATOR = By.xpath(".//wm-search-input//input");
     private final By TRACK_LOCATOR = By.xpath("");
 
 
@@ -12,5 +13,12 @@ public class MusicPage {
         this.driver = driver;
     }
 
+    public void find(String musicName) {
+        driver.findElement(SEARCH_LOCATOR).sendKeys(musicName);
+        driver.findElement(SEARCH_LOCATOR).sendKeys(Keys.ENTER);
+    }
 
+    public boolean isMusicPage() {
+        return driver.getCurrentUrl().contains("music");
+    }
 }

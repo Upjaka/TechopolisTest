@@ -3,18 +3,19 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class UserPageTest extends BaseTest {
+class MusicPageTest extends BaseTest {
 
-    private UserPage userPage;
+    private MusicPage musicPage;
 
     @BeforeEach
     public void start() {
         driverInit();
         get();
-        userPage = Helper.userPage(driver);
+        musicPage = Helper.musicPage(driver);
     }
 
     @Test
-    void toMusicPage() {
+    void find() {
+        musicPage.find("Queen");
     }
 }
