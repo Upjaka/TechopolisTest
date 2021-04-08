@@ -16,7 +16,7 @@ public class LoginPage {
     protected void check() {
     }
 
-    public UserPage doLogin(String username, String password) {
+    public UserPage signIn(String username, String password) {
         driver.findElement(LOGIN_LOCATOR).sendKeys(username);
         driver.findElement(PASSWORD_LOCATOR).sendKeys(password);
         driver.findElement(SIGN_IN_LOCATOR).click();
